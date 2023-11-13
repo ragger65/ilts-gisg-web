@@ -1,0 +1,319 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="author" content="Ralf Greve">
+  <meta name="description" content="Rironseppyou Network of the Glacier and
+  Ice Sheet Research Group @ ILTS, Hokkaido University">
+  <meta name="keywords" content="Ralf, Greve, Rironseppyou, Network, Linux">
+  <meta name="content-language" content="en">
+  <meta name="robots" content="index, follow">
+  <title>Rironnet</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+  <link href="./ralf_style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<table align="center" cellpadding="25" cellspacing="0"
+       bgcolor="#ffffff" width="95%">
+<tr><td>
+
+<hr>
+
+<h1 align="center" style="color:#000000;"> Rironseppyou Network (Rironnet)</h1>
+
+<hr>
+
+<h2 style="color:#000000;"> General information </h2>
+
+<ul>
+
+  <li>The Rironseppyou Network (Rironnet) is the Linux network operated by
+  the Glacier and Ice Sheet Research Group at the
+  Institute of Low Temperature Science, Hokkaido University.</li>
+
+  <li>The central server is the computer wwwice,
+  which distributes the users (via NIS = Network Information Service),
+  the home directories (via NFS = Network File System)
+  and the websites (via the Apache web server).</li>
+
+  <li>The home directories are located at /uchi/&lt;username&gt;
+  (=&nbsp;/home/&lt;username&gt;/mnthome).
+  In addition, each user can use work directories such as
+  /work/earth1/&lt;username&gt; etc.</li>
+
+</ul>
+
+<h2 style="color:#000000;"><a name="comp_equip">Computing equipment</a></h2>
+
+<table border="1" width="95%" style="margin-left:auto; margin-right:auto;">
+<tbody>
+
+  <tr>
+  <th class="bold"> Model </th>
+  <th class="bold"> Name (1) </th>
+  <th class="bold"> Room </th>
+  <th class="bold"> OS </th>
+  <th class="bold"> CPU </th>
+  <th class="bold"> RAM </th>
+  <th class="bold"> HD </th>
+  <th class="bold"> Exported directories </th>
+  </tr>
+
+  <tr align="center">
+  <td class="normal"> Dell&nbsp;Precision 7920</td>
+  <td class="normal"> <b>trillian</b></td>
+  <td class="normal"> 306</td>
+  <td class="normal"> OpenSUSE Leap 15.5</td>
+  <td class="normal"> Intel&nbsp;Xeon Gold 6256,<br>
+                      3.6&nbsp;GHz (4.5&nbsp;GHz Turbo),<br>
+                      12&nbsp;cores </td>
+  <td class="normal"> 64&nbsp;GB</td>
+  <td class="normal"> 4&nbsp;&times;&nbsp;2&nbsp;TB SATA</td>
+  <td class="normal"> /work/trillian1 (2&nbsp;TB)<br>
+                      /work/trillian2 (1.8&nbsp;TB)<br>
+                      /work/trillian9 (1.6&nbsp;TB)</td>
+  </tr>
+
+  <tr align="center">
+  <td class="normal"> Dell&nbsp;Precision 7910</td>
+  <td class="normal"> <b>earth</b></td>
+  <td class="normal"> 307</td>
+  <td class="normal"> OpenSUSE Leap 15.5</td>
+  <td class="normal"> 2&nbsp;&times; Intel&nbsp;Xeon E5-2690&nbsp;v4,<br>
+                      2.6&nbsp;GHz, 2&nbsp;&times; 14&nbsp;cores</td>
+  <td class="normal"> 128&nbsp;GB</td>
+  <td class="normal"> 4&nbsp;&times;&nbsp;2&nbsp;TB SATA</td>
+  <td class="normal"> /work/earth1 (2&nbsp;TB)<br>
+                      /work/earth2 (2&nbsp;TB)<br>
+                      /work/earth3 (2&nbsp;TB)<br>
+                      /work/earth9 (1.1&nbsp;TB)</td>
+  </tr>
+
+  <tr align="center">
+  <td class="normal"> Dell&nbsp;Precision 7610</td>
+  <td class="normal"> <b>deepthought</b></td>
+  <td class="normal"> 306</td>
+  <td class="normal"> OpenSUSE Leap 15.5</td>
+  <td class="normal"> Intel&nbsp;Xeon E5-2697&nbsp;v2,<br>
+                      2.7&nbsp;GHz, 12&nbsp;cores </td>
+  <td class="normal"> 128&nbsp;GB</td>
+  <td class="normal"> 3&nbsp;&times;&nbsp;2&nbsp;TB SATA<br>
+                      1&nbsp;&times;&nbsp;1&nbsp;TB SATA</td>
+  <td class="normal"> /work/deepthought1 (2&nbsp;TB)<br>
+                      /work/deepthought2 (2&nbsp;TB)<br>
+                      /work/deepthought3 (2&nbsp;TB)<br>
+                      /work/deepthought9 (350&nbsp;GB)</td>
+  </tr>
+
+  <tr align="center">
+  <td class="normal"> Dell&nbsp;Precision 3620</td>
+  <td class="normal"> <b>colin</b></td>
+  <td class="normal"> 306</td>
+  <td class="normal"> OpenSUSE Leap 15.5,<br>
+                      Windows 10 Pro</td>
+  <td class="normal"> Intel&nbsp;Core i7-7700K,<br>
+                      4.2&nbsp;GHz, 4&nbsp;cores</td>
+  <td class="normal"> 16&nbsp;GB</td>
+  <td class="normal"> 1&nbsp;&times;&nbsp;2&nbsp;TB SATA</td>
+  <td class="normal"> ---</td>
+  </tr>
+
+  <tr align="center">
+  <td class="normal"> Dell&nbsp;Optiplex 990</td>
+  <td class="normal"> <b>eddie</b></td>
+  <td class="normal"> 306</td>
+  <td class="normal"> OpenSUSE Leap 15.5</td>
+  <td class="normal"> Intel&nbsp;Core i5-2400,<br>
+                      3.1&nbsp;GHz, 4&nbsp;cores</td>
+  <td class="normal"> 8&nbsp;GB</td>
+  <td class="normal"> 1&nbsp;&times;&nbsp;1&nbsp;TB SATA</td>
+  <td class="normal"> ---</td>
+  </tr>
+
+  <tr align="center">
+  <td class="normal"> Dell&nbsp;OptiPlex 7040</td>
+  <td class="normal"> <b>wwwice</b> (server)</td>
+  <td class="normal"> 306</td>
+  <td class="normal"> OpenSUSE Leap 15.5</td>
+  <td class="normal"> Intel&nbsp;Core i5-6500,<br>
+                      3.2&nbsp;GHz, 4&nbsp;cores</td>
+  <td class="normal"> 8&nbsp;GB</td>
+  <td class="normal"> 2&nbsp;&times;&nbsp;2&nbsp;TB SATA</td>
+  <td class="normal"> /uchi<br>
+                      (home&nbsp;directories)</td>
+  </tr>
+
+</tbody>
+</table>
+
+<P CLASS="SMALL">(1) Full name: &lt;name&gt;.lowtem.hokudai.ac.jp</P>
+
+<h2 style="color:#000000;"> Backups </h2>
+
+<ul>
+
+  <li> A backup of all home directories /uchi/&lt;username&gt;
+  (=&nbsp;/home/&lt;username&gt;/mnthome)
+  is written every night on the external hard disk of the computer wwwice.
+
+  <li> No backups of the work directories
+  (/work/earth1/&lt;username&gt; etc.) are made.
+
+</ul>
+
+<h2 style="color:#000000;"><a name="rules">Rules and hints</a></h2>
+
+<ul>
+
+  <li><div style="color:#8800ff; font-weight:bold;">It is your own
+  responsibility to make regular backups of your personal data</div>
+  &nbsp;&nbsp;&nbsp;(on memory stick, portable hard disk, DVD or CD).
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not rely fully on the automatic
+  backup of the home directories.
+  </li>
+
+  <li>Do not eat or drink in the PC room 306, and keep it clean.</li>
+
+  <li>If you end a working session, please log out and switch off the
+  monitor, but do not switch off the computer.</li>
+
+  <li>Do not use the server wwwice for regular work.</li>
+
+  <li>Large data files must not be kept in the home directories
+  /uchi/&lt;username&gt; (=&nbsp;/home/&lt;username&gt;/mnthome).
+  <br>
+  &nbsp;&nbsp;&nbsp;Please use one of the work directories instead.</li>
+
+  <li>All users must be subscribed to the 
+  <a href="https://ml.hines.hokudai.ac.jp/mailman/listinfo/rironnet">Rironnet
+  mailing list</a> in order to get security-relevant information etc.</li>
+
+  <li> If there are any problems, please contact
+  <br>
+  &nbsp;&nbsp;&nbsp;Ralf Greve &lt;greve@xxx&gt; or
+  Shin Sugiyama &lt;sugishin@xxx&gt;
+  (xxx&nbsp;=&nbsp;lowtem.hokudai.ac.jp).
+
+</ul>
+
+<h2 style="color:#000000;"><a name="software">Software</a></h2>
+
+<ul>
+
+  <li>Compilers:
+    <ul>
+      <li><A HREF="https://software.intel.com/en-us/intel-parallel-studio-xe/">Intel
+          Parallel Studio XE 2020 Composer Edition for Fortran and C++</A>
+          (network license for 2 concurrent users).</li>
+      <li><A HREF="https://gcc.gnu.org/">GNU Compiler Collection (GCC)</A>,
+          including GFortran, C, C++ and Java.</li>
+    </ul></li>
+
+  <!-- <li>Tools and libraries for parallel computing:
+    <ul>
+      <li><A HREF="https://www.open-mpi.org/">Open MPI</A>: Open Source High Performance
+          Message Passing Interface Library.</li>
+      <li><A HREF="https://www.openmp.org/">OpenMP</A>: Open Multi-Processing
+          (supported by the Intel Fortran Compiler and the GNU Compiler Collection).</li>
+      <li><A HREF="https://www.netlib.org/blacs/">BLACS</A>: Basic Linear Algebra
+          Communication Subprograms.</li>
+      <li><A HREF="https://computation.llnl.gov/casc/hypre/software.html">Hypre:</A>
+          High performance preconditioners for scalable (parallel) solution of linear
+          systems.</li>
+      <li><A HREF="https://www.ssisc.org/lis/">Lis</A>:
+          Library of iterative solvers for linear systems
+          (supports OpenMP and MPI-1).</li>
+      <li><A HREF="https://graal.ens-lyon.fr/MUMPS/">MUMPS</A>: Multifrontal parallel
+          direct solver.</li>
+      <li><A HREF="https://www.pardiso-project.org/">Pardiso:</A> Thread safe library
+          for solving sparse symmetric and unsymmetric linear systems on shared memory
+          systems (only on zaphod).</li>
+      <li><A HREF="https://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview">ParMetis:</A>
+          Parallel library for graphs, mesh partitioning and for ordering
+          of sparse matrices.</li>
+      <li><A HREF="https://www.netlib.org/scalapack/scalapack_home.html">ScaLAPACK</A>:
+          LAPACK for distributed memory systems.</li>
+      <li><A HREF="https://crd.lbl.gov/~xiaoye/SuperLU/">SuperLU:</A> Library for
+          direct solution of large, sparse, nonsymmetric systems
+          of linear equations for distributed memory systems.</li>
+    </ul></li> -->
+
+  <li><A HREF="https://www.python.org/">Python</A> interpreter.</li>
+
+  <li><A HREF="https://www.mathworks.com/products/matlab/">MATLAB 23.2 (R2023b)</A>
+      (network license for 5 concurrent users).</li>
+
+  <li><A HREF="https://www.gnu.org/software/octave/">GNU Octave</A>
+      (free software, largely compatible to MATLAB).</li>
+
+  <li><A HREF="https://qgis.org/">QGIS</A> - 
+      free and open-source geographic information system (GIS).</li>
+
+  <li>Visualization tools 
+      <A HREF="https://www.generic-mapping-tools.org/">GMT</A>
+      and <A HREF="http://cola.gmu.edu/grads/">GrADS</A>.</li>
+
+  <li><A HREF="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</A> -  Network
+      Common Data Form (software libraries and self-describing, machine-independent
+      data formats for scientific data),<br>
+      <A HREF="http://meteora.ucsd.edu/~pierce/ncview_home_page.html">Ncview</A> -
+      NetCDF visual browser,
+      <A HREF="https://nco.sourceforge.net/">NCO</A> - NetCDF Operators,
+      <A HREF="https://code.mpimet.mpg.de/projects/cdo">CDO</A> - Climate Data Operators.</li>
+
+  <li>Typesetting systems LaTeX (with editor kile) and LyX.</li>
+
+  <li>Various Linux standard software...</li>
+
+</ul>
+
+<!-- <h2 style="color:#000000;"> Printer queues </h2>
+
+<ul>
+  <li> <b>lp</b> - default queue, HP LaserJet 4200n
+                                  (B/W laser printer) in room 306.</li>
+  <li> <b>iai</b> - Xerox Phaser 8550DP
+                         (colour solid-ink printer) in room 306.</li>
+  <li> <b>phaser</b> - Xerox Phaser 8400DP
+                            (colour solid-ink printer) in room 312.</li>
+</ul> -->
+
+</td></tr>
+</table>
+
+<table align="center" cellpadding="0" cellspacing="0" width="95%">
+<tr><td>
+
+<p style="text-align:center">
+&nbsp;
+<br>
+<a href="../index.html">Home</a>
+&nbsp;&nbsp;&nbsp;
+<a href="../intro/index.html">Introduction</a>
+&nbsp;&nbsp;&nbsp;
+<a href="../member/index.html">Members</a>
+&nbsp;&nbsp;&nbsp;
+<a href="../pub/index.html">Publications</a>
+&nbsp;&nbsp;&nbsp;
+<a href="../seminar/index.html">Seminar</a>
+&nbsp;&nbsp;&nbsp;
+<a href="../album/index.html">Photos</a>
+&nbsp;&nbsp;&nbsp;
+<a href="../links/index.html">Links</a>
+&nbsp;&nbsp;&nbsp;
+<a href="../rironnet/index.html">Rironnet</a>
+</p>
+
+<p align="right">Last modified:
+2023-09-26 by Ralf Greve
+&nbsp;&nbsp;<br>&nbsp;</p>
+
+</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+&maisu=20&end
+&haikei=E8F0F3&end
+
+&information=Please click photo!
+
+&setumei1=On the Qaanaaq Ice Cap
+&setumei2=At the side of Bowdoin Gletscher
+&setumei3=Nice view!
+&setumei4=Cross the stream
+&setumei5=On the glacier 1
+&setumei6=On the glacier 2
+&setumei7=Which direction should we go?
+&setumei8=Ice drilling
+&setumei9=Elevation survey
+&setumei10=Calving front of the Bowdoin Gletscher
+&setumei11=Time lapse camera
+&setumei12=Helicopter takeoff
+&setumei13=Make our camp
+&setumei14=In the kitchen tent
+&setumei15=Team!
+&setumei16=Shin Sugiyama -Leader-
+&setumei17=Takanobu Sawagaki -Route finder-
+&setumei18=Shun Tsutaki
+&setumei19=Mihiro Maruyama
+&setumei20=Daiki Sakakibara

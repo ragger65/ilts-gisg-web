@@ -1,0 +1,25 @@
+&maisu=20&end
+&haikei=E8F0F3&end
+
+&information=画像をクリックすると拡大表示します。
+
+&setumei1=Terminal part of Rhonegletscher
+&setumei2=Uplift of ice surface at the terminus
+&setumei3=Drilling equipments
+&setumei4=Hot water drilling
+&setumei5=Measurement of glacier vertical strain
+&setumei6=Installation of borehole camera
+&setumei7=Measurement of borehole incline
+&setumei8=Measurement of subglacial till thickness
+&setumei9=Tent site
+&setumei10=Dinner
+&setumei11=Discussion about measured data
+&setumei12=After the field work 1
+&setumei13=After the field work 2
+&setumei14=Huge ice crystals
+&setumei15=Alpine ibex
+&setumei16=Flowres 1
+&setumei17=Flowers 2
+&setumei18=
+&setumei19=
+&setumei20=

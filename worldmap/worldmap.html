@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<title>Fieldwork all over the world</title>
+<style tyep="text/css">
+<!--
+#message{
+font-size: 9pt;
+font-family:"Hiragino Kaku Gothic Pro",HiraKakuPro-W3,"ヒラギノ角ゴ Pro W3","メイリオ", Meiryo,"MS P ゴシック",verdana,sans-serif;color:#333;
+}
+--></style>
+<script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAF0DlQhDX2hWzkp44vfbD-xQcUIzDhfDx48WBcjrfzS7fljW8JBS7z2nLd2666EmPhbN0R6y3Sux18Q" type="text/javascript"></script>
+<script type="text/javascript">
+
+//<![CDATA[
+function load() {
+if (GBrowserIsCompatible()) {
+
+
+//地図を作成
+var point = new GLatLng(35,135);
+var map = new GMap2(document.getElementById("map"));
+map.setCenter(point, 3, G_HYBRID_MAP);
+
+
+//マップオーバービューコントローラを付ける
+var miniMap=new GOverviewMapControl(new GSize(150,100));
+map.addControl(miniMap);
+map.addControl(new GScaleControl());  //スケールコントローラ(尺度定規)を付ける
+
+
+map.addMapType(G_HYBRID_MAP);  //地図+写真
+map.addMapType(G_PHYSICAL_MAP);  //地形
+map.addMapType(G_SATELLITE_3D_MAP);  //Google Earth
+map.addControl(new GMapTypeControl());  //マップタイプコントローラの追加
+map.addControl(new GLargeMapControl());  //マップコントローラを付ける
+
+
+
+//オリジナルマーカーの画像を作成
+var icon = new GIcon();
+icon.image = "icon.gif";
+icon.iconSize = new GSize(38, 50);
+icon.iconAnchor = new GPoint(18, 50);
+icon.infoWindowAnchor = new GPoint(18, 0);
+
+
+//マーカーを追加(低温科学研究所)
+var marker = new GMarker(new GLatLng(43.083067,141.338886),icon);
+map.addOverlay(marker);
+//マーカーをクリックしたら、タブ付きの吹き出しを表示する
+GEvent.addListener(marker, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>低温科学研究所<br>\
+		<img src='ilts.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		いつもお世話になってま～す。\
+	</div>")
+];
+marker.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+
+
+
+//マーカーを追加(ichinsky)
+var marker_ichinsky = new GMarker(new GLatLng(55.6773056, 157.7245));
+map.addOverlay(marker_ichinsky);
+//マーカーをクリックしたら、タブ付きの吹き出しを表示する
+GEvent.addListener(marker_ichinsky, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>カムチャッカ イチンスキー氷河<br>\
+		<img src='../album/images/now_printing.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2006年8月:白岩,佐藤,戸井田<br><br>\
+		山岳アイスコア掘削(114.99m)<hr>\
+		関連論文\
+	</div>")
+];
+marker_ichinsky.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(ushkovsky)
+var marker_ushkovsky = new GMarker(new GLatLng(56.074467, 160.467633));
+map.addOverlay(marker_ushkovsky);
+//マーカーをクリックしたら、タブ付きの吹き出しを表示する
+GEvent.addListener(marker_ushkovsky, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>カムチャッカ ウシュコフスキー氷冠<br>\
+		<img src='../album/images/now_printing.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		1998年6-7月:白岩<br><br>\
+		山岳アイスコア掘削(211.7m)<hr>\
+		関連論文<br>\
+		Shiraiwa(1999)\
+	</div>")
+];
+marker_ushkovsky.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(logan)
+var marker_logan = new GMarker(new GLatLng(60.588888888889, -140.60416666667));
+map.addOverlay(marker_logan);
+GEvent.addListener(marker_logan, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>カナダ ローガン山<br>\
+		<img src='../album/images/now_printing.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2002年:白岩,金森<br><br>\
+		山岳アイスコア掘削(220.52m)<hr>\
+		関連論文<br>\
+		Shiraiwa (2003)\
+	</div>")
+];
+marker_logan.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(wrangel)
+var marker_wrangel = new GMarker(new GLatLng(61.998222222222, -144.04166666667));
+map.addOverlay(marker_wrangel);
+GEvent.addListener(marker_wrangel, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>アラスカ ランゲル山<br>\
+		<img src='../album/images/now_printing.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2003年:白岩,金森,安成,高濱<br><br>\
+		山岳アイスコア掘削(50m)<hr>\
+		関連論文<br>\
+		Shiraiwa (2004)<br>\
+		Kanamori (2008)<br>\
+		Yasunari (2007, 2009)\
+	</div>")
+];
+marker_wrangel.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(mckinley)
+var marker_mckinley = new GMarker(new GLatLng(63.078305555556, -151.05088888889));
+map.addOverlay(marker_mckinley);
+GEvent.addListener(marker_mckinley, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>アラスカ マッキンリー山<br>\
+		<img src='../album/images/now_printing.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2004年:金森<br><br>\
+		ピット観測<hr>\
+		関連論文<br>\
+		Kanamori (2005)\
+	</div>")
+];
+marker_mckinley.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(rhone)
+var marker_rhone = new GMarker(new GLatLng(46.582433,8.385873));
+map.addOverlay(marker_rhone);
+GEvent.addListener(marker_rhone, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>スイス ローヌ氷河<br>\
+		<img src='../album/images/now_printing.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2007年6-9月:<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/rhone07/rhone07.html\"target=\"blank\" >杉山</a>,津滝,西村<br>\
+		2008年7-9月:杉山,<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~tsutaki/rhonegletscher/switzerland.html\"target=\"blank\" >津滝</a>,西村,吉澤<br>\
+		2009年7-9月:杉山,津滝,西村,吉澤<br><br>\
+		熱水掘削<br>表面流動速度と掘削孔内の水位測定<br>表面融解量とアルベド測定<br>掘削孔傾斜観測<br>底面堆積物サンプリング<br>ボアホールカメラを用いた孔内観測<hr>\
+		関連論文<br>\
+		Sugiyama (2008,2011)<br>\
+		Tsutaki (2009,2011)\
+	</div>")
+];
+marker_rhone.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(aurora)
+var marker_aurora = new GMarker(new GLatLng(63.53091025,-146.53337797222));
+map.addOverlay(marker_aurora);
+GEvent.addListener(marker_aurora, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>アラスカ オーロラピーク<br>\
+		<img src='../album/images/2008aurora.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2008年5-6月:白岩,<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/alaska2008/alaska2008.html\"target=\"blank\" >杉山</a>,福田<br><br>\
+		山岳アイスコア掘削(180.17m)<br>氷河流動速度測定<br>アイスレーダーを用いた氷厚測定<hr>\
+		関連論文<br>\
+		Fukuda (2011)\
+	</div>")
+];
+marker_aurora.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(moreno)
+var marker_moreno = new GMarker(new GLatLng(-50.486347,-73.099251));
+map.addOverlay(marker_moreno);
+GEvent.addListener(marker_moreno, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>パタゴニア ペリトモレノ氷河<br>\
+		<img src='../album/images/2008moreno.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2008年12-翌1月:<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/moreno2008/moreno2008.html\"target=\"blank\" >杉山</a>,津滝<br>\
+		2010年2-3月:<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/moreno2010/moreno2010.html\"target=\"blank\" >杉山</a>,刀根<br>\
+		2012年12月-翌1月:<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/patagonia2012/patagonia2012.html\"target=\"blank\" >杉山</a>,榊原,箕輪<br>\
+		熱水掘削ドリルによる氷河底面水圧測定<hr>\
+		関連論文<br>\
+		Sugiyama (2010)<br>\
+		Sakakibara and others (2013)\
+	</div>")
+];
+marker_moreno.openInfoWindowTabsHtml(infoTabs);
+});
+
+//マーカーを追加(upsala)
+var marker_upsala = new GMarker(new GLatLng(-49.906871,-73.287048));
+map.addOverlay(marker_upsala);
+GEvent.addListener(marker_upsala, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>パタゴニア ウプサラ氷河<br>\
+		<img src='../album/images/2012upsala.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2012年12月-翌1月:<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/patagonia2012/patagonia2012.html\"target=\"blank\" >杉山</a>,榊原,箕輪<br><hr>\
+		関連論文\
+	</div>")
+];
+marker_upsala.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(viedma)
+var marker_viedma = new GMarker(new GLatLng(-49.492586,-73.099594));
+map.addOverlay(marker_viedma);
+GEvent.addListener(marker_viedma, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>パタゴニア ビエドマ氷河<br>\
+		<img src='../album/images/2012viedma.jpg' vspace=0 hspace=0><br>>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2012年12月-翌1月:<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/patagonia2012/patagonia2012.html\"target=\"blank\" >杉山</a>,榊原,箕輪<br><hr>\
+		関連論文\
+	</div>")
+];
+marker_viedma.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(yala)
+var marker_yala = new GMarker(new GLatLng(28.238313,85.619373));
+map.addOverlay(marker_yala);
+GEvent.addListener(marker_yala, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>ヒマラヤ ヤラ氷河<br>\
+		<img src='../album/images/2009yala.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2010年10-11月:<a href=\"http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/himalaya2009/himalaya2009.html\"target=\"blank\" >杉山</a>,刀根<br><br>\
+		山岳アイスコア掘削<br>氷河流動速度測定<br>GPRを用いた氷厚測定<hr>\
+		関連論文\
+	</div>")
+];
+marker_yala.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+
+//マーカーを追加(rikhasamba)
+var marker_rikhasamba = new GMarker(new GLatLng(28.824147,83.489056));
+map.addOverlay(marker_rikhasamba);
+GEvent.addListener(marker_rikhasamba, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>ヒマラヤ リッカサンバ氷河<br>\
+		<img src='../album/images/2010rikhasamba.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2010年4-5月:福田<br><br>\
+		アイスレーダーを用いた氷厚測定<hr>\
+		関連論文\
+	</div>")
+];
+marker_rikhasamba.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(trambau)
+var marker_trambau = new GMarker(new GLatLng(27.854406,86.536045));
+map.addOverlay(marker_trambau);
+//マーカーをクリックしたら、タブ付きの吹き出しを表示する
+GEvent.addListener(marker_trambau, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>ヒマラヤ トランバウ氷河<br>\
+		<img src='../album/images/2010trambau.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2010年10-11月:福田<br><br>\
+		何もできずに撤退<hr>\
+		関連論文\
+	</div>")
+];
+marker_trambau.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(neem)
+var marker_neem = new GMarker(new GLatLng(77.45, -51.06));
+map.addOverlay(marker_neem);
+//マーカーをクリックしたら、タブ付きの吹き出しを表示する
+GEvent.addListener(marker_neem, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>グリーンランド<br>\
+		<img src='../album/images/now_printing.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2009年5-8月:宮本<br><br>\
+		<hr>\
+		関連論文\
+	</div>")
+];
+marker_neem.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(qaanaaq)
+var marker_qaanaaq = new GMarker(new GLatLng(77.48, -69.36));
+map.addOverlay(marker_qaanaaq);
+//マーカーをクリックしたら、タブ付きの吹き出しを表示する
+GEvent.addListener(marker_qaanaaq, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>グリーンランド・カナック<br>\
+		<img src='../album/images/2012greenland.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		2012年6-7月:<a href='http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/greenland2012/greenland2012.html'>杉山</a>, 榊原, 松野<br>\
+		2013年6-8月:<a href='http://wwwice.lowtem.hokudai.ac.jp/~sugishin/photo_album/greenland2013/greenland2013.html'>杉山</a>, 津滝, 榊原, 丸山<br>\
+		<hr>\
+		関連論文\
+	</div>")
+];
+marker_qaanaaq.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+//マーカーを追加(showa)
+var marker_showa = new GMarker(new GLatLng(-69.004199,39.582024));
+map.addOverlay(marker_showa);
+//マーカーをクリックしたら、タブ付きの吹き出しを表示する
+GEvent.addListener(marker_showa, "click", function() {
+var infoTabs = [
+new GInfoWindowTab(
+	"写真", 
+	"<div id='message'>南極 昭和基地<br>\
+		<img src='../album/images/now_printing.jpg' vspace=0 hspace=0>\
+	</div>"),
+new GInfoWindowTab(
+	"概要", 
+	"<div id='message'>\
+		南極地域観測隊<br>\
+		　JARE35 夏隊 (1993-1994)　本堂<br>\
+		　JARE35 越冬隊 (1993-1995)　白岩<br>\
+		　JARE47 越冬隊 (2005-07)　斎藤<br>\
+		　JARE49 夏隊 (2007-08)　杉山<br>\
+		　JARE51 夏隊 (2009-10)　西村<br>\
+	</div>")
+];
+marker_showa.openInfoWindowTabsHtml(infoTabs);
+});
+
+
+
+
+
+
+
+      }
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+    <div id="map" style="width: 600px; height: 450px"></div>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,25 @@
+&maisu=20&end
+&haikei=E8F0F3&end
+
+&information=Please click photo!
+
+&setumei1=Perito Moreno Glacier
+&setumei2=Upsala Glacier
+&setumei3=Viedma Glacier
+&setumei4=Crevasse, crevass and crevass....
+&setumei5=We made it!
+&setumei6=Lake measurement
+&setumei7=New discovery?
+&setumei8=Cordero Patagonico
+&setumei9=Glacialium
+&setumei10=Camp site in Upsala glacier
+&setumei11=We need rest.
+&setumei12=This is PATAGONIA!
+&setumei13=Hard to find the route
+&setumei14=Something wrong?
+&setumei15=washing!
+&setumei16=You survive!
+&setumei17=うまかった。
+&setumei18=sunrise
+&setumei19=sumset
+&setumei20=See you my sweet Patagonia!

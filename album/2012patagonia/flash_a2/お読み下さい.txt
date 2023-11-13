@@ -1,0 +1,60 @@
+この度は、Flash Lab　をご利用頂き誠にありがとうございます。
+
+
+この「お読み下さい」テキストが入っているフォルダを
+「使用したいウェブページ」と同じ階層に移動させ、下記の設置ソースをコピーし
+「使用したいウェブページ」のソースにペースト（貼り付け）して下さい。
+
+
+■各ファイルの説明-------------------------------------------------------------
+
+　album2.swf		フォトアルバムを表示するフラッシュファイル
+　setting.txt		フォトアルバムの枚数や色を設定するテキストファイル
+　1.jpg～20.jpg　　　　 フォトアルバムに表示する画像ファイル
+　nophoto.jpg           指定枚数が20以下の時に表示する画像ファイル
+　お読み下さい.txt	現在お読みいただいているこのテキストファイル
+
+
+■setting.txtファイルについて--------------------------------------------------
+
+　setting.txtを開き、編集することでフォトアルバムの
+　背景色などをを変更することができます。
+
+
+　&maisu=15&end　　　　　掲載する写真の枚数
+　&haikei=E8F0F3&end　　 背景色
+
+  =以下の6つの文字を16進数で色指定します。
+
+
+　&information=画像をクリックすると拡大表示します。
+　&setumei1～&setumei20
+　
+　&informaiton=　は初期の画面に表示させたいテキストを記述します。
+　&setumei1～&setumei20= には、各写真に表示させたいテキストを表示します。（全角35文字程度まで）
+
+
+
+（注）	setting.txtに記述されている　&haikei=  や　&end などは消さないように注意して下さい。
+	消してしまうと設定がフラッシュに適用されなくなります。
+
+
+（注）　このフォトアルバムは画像を20枚まで掲載でき、番号順にJPEG画像を表示します。
+　　　　枚数を15に設定した場合、サムネイルには 1.jpg～15.jpg を順番に掲載し
+　　　　それ以外のサムネイルは　nophoto.jpg　が掲載されます。
+
+（注）　掲載画像のサイズは　横500px、縦375px　です。
+
+
+■設置ソース--------------------------------------------------------------------
+
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="600" height="470">
+<param name="movie" value="flash_a2/album2.swf">
+<param name="quality" value="high">
+<embed src="flash_a2/album2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="600" height="470"></embed></object>
+
+---------------------------------------------------------------------------------
+
+flash Lab Manager Kanna
+flash@oct-net.ne.jp
+
