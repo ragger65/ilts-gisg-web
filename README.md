@@ -1,2 +1,3 @@
 # ilts-gisg-web
-Websites of the Glacier and Ice Sheet Group @ ILTS, Hokkaido University.
+
+Websites of the Glacier and Ice Sheet Research Group @ ILTS, Hokkaido University.
